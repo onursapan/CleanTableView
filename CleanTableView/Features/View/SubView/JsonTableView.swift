@@ -26,7 +26,10 @@ final class JsonTableView: NSObject {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = UITableViewCell()
+        cell.textLabel?.text = items[indexPath.row].title
+        cell.detailTextLabel?.text = items[indexPath.row].body
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -18,7 +18,7 @@ enum JsonPlaceHolderPath: String {
 
 extension JsonPlaceHolderPath{
     func withBaseUrl() -> String {
-        return "https://jsonplaceholder.typicode.com/\(self.rawValue)"
+        return "https://jsonplaceholder.typicode.com\(self.rawValue)"
     }
 }
 struct JsonPlaceHolderService: JsonPlaceHolderProtocol {
