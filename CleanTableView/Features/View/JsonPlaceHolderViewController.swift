@@ -12,6 +12,7 @@ class JsonPlaceHolderViewController: UIViewController {
     @IBOutlet weak var tableViewJsonPlaceHolder: UITableView!
     
     private let jsonTableView: JsonTableView = JsonTableView()
+    private let jsonService: JsonPlaceHolderProtocol = JsonPlaceHolderService() 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class JsonPlaceHolderViewController: UIViewController {
 extension JsonPlaceHolderViewController: JsonTableViewOutput {
     func onSelected(item: PostModel) {
         print(item.body ?? "")
+        
     }
     
     
